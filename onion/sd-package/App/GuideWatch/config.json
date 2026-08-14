@@ -1,0 +1,6 @@
+{
+"label":"Guide Watch",
+"icon":"../../Icons/Default/app/ereader.png",
+"launch":"launch.sh",
+"description":"In-game guide popup: L2+R2 then Down opens the walkthrough over a paused game"
+}

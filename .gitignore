@@ -1,0 +1,9 @@
+.DS_Store
+
+# Walkthrough .txt files are GameFAQs content. They are downloaded by the
+# user, on their own device, from archive.org. This repo ships none of them.
+*.txt
+
+# Local test captures pulled off the SD card
+device-logs/
+*.log

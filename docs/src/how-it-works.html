@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #fdf6e9;
+    --ink: #17130e;
+    --red: #ff5b5b;
+    --yellow: #ffc93c;
+    --green: #58c274;
+    --blue: #57a4ff;
+    --purple: #a06bf5;
+    --px-font: 'Press Start 2P', monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1280px; height: 430px;
+    background: var(--cream);
+    font-family: 'Manrope', sans-serif; color: var(--ink);
+    padding: 40px 44px;
+    background-image:
+      linear-gradient(rgba(23,19,14,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(23,19,14,.045) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+  h2 {
+    font-family: var(--px-font); font-size: 16px; margin-bottom: 30px;
+    text-shadow: 3px 3px 0 var(--yellow);
+  }
+  .row { display: flex; align-items: stretch; gap: 14px; }
+  .step {
+    flex: 1; background: #fff; border: 4px solid var(--ink);
+    box-shadow: 7px 7px 0 var(--ink); padding: 18px 16px 20px;
+    display: flex; flex-direction: column;
+  }
+  .n {
+    font-family: var(--px-font); font-size: 11px; color: #fff;
+    background: var(--ink); width: 30px; height: 30px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 14px;
+  }
+  .step.a .n { background: var(--red); }
+  .step.b .n { background: var(--blue); }
+  .step.c .n { background: var(--green); }
+  .step.d .n { background: var(--purple); }
+  .k {
+    font-family: var(--px-font); font-size: 10px; line-height: 1.7;
+    margin-bottom: 12px; min-height: 34px;
+  }
+  .k em { font-style: normal; background: var(--yellow); padding: 2px 5px; }
+  .d { font-size: 15px; font-weight: 500; line-height: 1.5; color: #3b332a; }
+  .arrow {
+    align-self: center; font-family: var(--px-font);
+    font-size: 15px; color: var(--ink); opacity: .45;
+  }
+  .foot {
+    margin-top: 26px; font-size: 15px; font-weight: 700;
+    border-left: 6px solid var(--ink); padding-left: 14px;
+  }
+  .foot span { background: var(--yellow); padding: 1px 6px; box-shadow: 2px 2px 0 var(--ink); }
+</style>
+</head>
+<body>
+  <h2>HOW IT WORKS</h2>
+  <div class="row">
+    <div class="step a">
+      <div class="n">1</div>
+      <div class="k">LAUNCH<br>A GAME</div>
+      <div class="d">One short rumble means a walkthrough for this game is sitting on your card.</div>
+    </div>
+    <div class="arrow">&#9654;</div>
+    <div class="step b">
+      <div class="n">2</div>
+      <div class="k"><em>L2+R2</em><br>THEN DOWN</div>
+      <div class="d">The game saves and steps aside. No menus, no quitting by hand.</div>
+    </div>
+    <div class="arrow">&#9654;</div>
+    <div class="step c">
+      <div class="n">3</div>
+      <div class="k">READ THE<br>GUIDE</div>
+      <div class="d">Opens full screen in Onion's Ebook Reader, at the exact line you stopped reading.</div>
+    </div>
+    <div class="arrow">&#9654;</div>
+    <div class="step d">
+      <div class="n">4</div>
+      <div class="k">PRESS<br>MENU</div>
+      <div class="d">Straight back into the game, exactly where you paused. Rumble says the combo is armed again.</div>
+    </div>
+  </div>
+  <p class="foot">Guides come from the <span>Guide Downloader</span> app in the same package: pick a console, it fills your card over wifi.</p>
+</body>
+</html>

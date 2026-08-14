@@ -1,0 +1,6 @@
+{
+"label":"Guide Downloader",
+"icon":"../../Icons/Default/app/otaupdate.png",
+"launch":"launch.sh",
+"description":"Downloads missing walkthroughs from guides.retromodlab.com for every ROM on the card"
+}

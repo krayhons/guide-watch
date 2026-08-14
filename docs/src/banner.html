@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #fdf6e9;
+    --ink: #17130e;
+    --red: #ff5b5b;
+    --yellow: #ffc93c;
+    --green: #58c274;
+    --blue: #57a4ff;
+    --purple: #a06bf5;
+    --px-font: 'Press Start 2P', monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1280px; height: 500px;
+    background: var(--cream);
+    font-family: 'Manrope', sans-serif;
+    color: var(--ink);
+    display: flex; align-items: center; gap: 56px;
+    padding: 0 64px;
+    /* faint pixel grid, same trick as the landing */
+    background-image:
+      linear-gradient(rgba(23,19,14,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(23,19,14,.045) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+  .left { flex: 1; }
+  h1 {
+    font-family: var(--px-font);
+    font-size: 46px; line-height: 1.25; letter-spacing: -.5px;
+    text-shadow: 5px 5px 0 var(--red);
+    margin-bottom: 26px;
+  }
+  .tag { font-size: 21px; font-weight: 700; line-height: 1.5; max-width: 560px; }
+  .tag b { background: var(--yellow); padding: 0 6px; box-shadow: 3px 3px 0 var(--ink); }
+  .badges { display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
+  .badge {
+    font-family: var(--px-font); font-size: 10px; letter-spacing: .04em;
+    border: 3px solid var(--ink); padding: 9px 12px; background: #fff;
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .badge.g { background: var(--green); }
+  .badge.b { background: var(--blue); }
+  .badge.p { background: var(--purple); color: #fff; }
+
+  /* handheld */
+  .device {
+    width: 340px; height: 420px; background: #2b2620;
+    border: 4px solid var(--ink); border-radius: 26px;
+    box-shadow: 10px 10px 0 var(--ink);
+    padding: 22px 20px; position: relative; flex-shrink: 0;
+  }
+  .shoulders { position: absolute; top: -14px; left: 34px; right: 34px; display: flex; justify-content: space-between; }
+  .sh {
+    width: 74px; height: 16px; background: #2b2620;
+    border: 4px solid var(--ink); border-radius: 6px 6px 0 0;
+    font-family: var(--px-font); font-size: 7px; color: var(--yellow);
+    text-align: center; line-height: 9px;
+  }
+  .screen {
+    background: var(--cream); border: 4px solid var(--ink);
+    height: 232px; padding: 10px 11px; overflow: hidden;
+  }
+  .screen .title {
+    font-family: var(--px-font); font-size: 8px; color: var(--ink);
+    border-bottom: 3px solid var(--ink); padding-bottom: 7px; margin-bottom: 8px;
+  }
+  .line { height: 5px; background: #d8cdb8; margin-bottom: 7px; border-radius: 1px; }
+  .line.hl { background: var(--red); }
+  .line.w1 { width: 100%; } .line.w2 { width: 86%; } .line.w3 { width: 94%; }
+  .line.w4 { width: 66%; } .line.w5 { width: 78%; }
+  .controls { display: flex; justify-content: space-between; align-items: center; margin-top: 26px; padding: 0 6px; }
+  .dpad { width: 62px; height: 62px; position: relative; }
+  .dpad i {
+    position: absolute; background: #17130e; border: 3px solid #0b0906;
+    border-radius: 3px;
+  }
+  .dpad .v { left: 21px; top: 0; width: 20px; height: 62px; }
+  .dpad .h { top: 21px; left: 0; width: 62px; height: 20px; }
+  .dpad .down { left: 21px; top: 38px; width: 20px; height: 24px; background: var(--red); z-index: 2; }
+  .abxy { width: 74px; height: 74px; position: relative; }
+  .abxy i {
+    position: absolute; width: 23px; height: 23px; border-radius: 50%;
+    border: 3px solid #0b0906; background: #4a423a;
+  }
+  .abxy .t { left: 26px; top: 0; } .abxy .l { left: 0; top: 26px; }
+  .abxy .r { left: 51px; top: 26px; } .abxy .bm { left: 26px; top: 51px; }
+  .combo {
+    position: absolute; bottom: 16px; left: 0; right: 0; text-align: center;
+    font-family: var(--px-font); font-size: 8px; color: var(--yellow);
+  }
+</style>
+</head>
+<body>
+  <div class="left">
+    <h1>GUIDE<br>WATCH</h1>
+    <p class="tag">Walkthroughs <b>inside your games</b> on OnionOS. A rumble tells you a guide exists, a button combo opens it, and you land back exactly where you paused.</p>
+    <div class="badges">
+      <span class="badge g">MIYOO MINI PLUS</span>
+      <span class="badge b">ONIONOS</span>
+      <span class="badge p">FREE + OPEN SOURCE</span>
+    </div>
+  </div>
+
+  <div class="device">
+    <div class="shoulders">
+      <div class="sh">L2</div>
+      <div class="sh">R2</div>
+    </div>
+    <div class="screen">
+      <div class="title">FINAL FANTASY IX</div>
+      <div class="line w1"></div>
+      <div class="line w3"></div>
+      <div class="line hl w2"></div>
+      <div class="line w1"></div>
+      <div class="line w4"></div>
+      <div class="line w3"></div>
+      <div class="line w5"></div>
+      <div class="line w1"></div>
+      <div class="line w2"></div>
+      <div class="line w4"></div>
+      <div class="line w3"></div>
+      <div class="line w1"></div>
+      <div class="line w5"></div>
+      <div class="line w2"></div>
+      <div class="line w1"></div>
+    </div>
+    <div class="controls">
+      <div class="dpad"><i class="v"></i><i class="h"></i><i class="down"></i></div>
+      <div class="abxy"><i class="t"></i><i class="l"></i><i class="r"></i><i class="bm"></i></div>
+    </div>
+    <div class="combo">L2 + R2 + DOWN</div>
+  </div>
+</body>
+</html>
